@@ -42,3 +42,4 @@ public:
 		cout << "\n" << pid << " " << name << " " << price;
 	}
 };
+
