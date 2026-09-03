@@ -23,14 +23,18 @@ public:
 		this->price = price;
 	}
 	void accept()
-	{
+	{	
+		double tempPrice; 
 		cout << "\n enter the values:";
-		cin >> pid >> name >> price;
-		if (price < 0)
+		cin >> pid >> name >> tempPrice;
+		if (tempPrice < 0)
 		{
 			CustomException ex("price cannot be negative");
 			throw ex;
 		}
+
+		price = tempPrice;
+
 	}
 	void display()
 	{
