@@ -1,20 +1,21 @@
-#include<iostream>
-using namespace std; 
+#include <iostream>
+#include <cstring>
+using namespace std;
 
-class CustomException{
-    private : 
-    char errMsg[50];
+class CustomException
+{
+private:
+    char errMsg[100];
 
+public:
+    CustomException(char *errmsg)
+    {
 
-    public: 
-
-    CustomException(char* errmsg){
-        
-            strcpy(this->errMsg, errMsg);
-        
+        strcpy(this->errMsg, errMsg);
     }
-    
-    const char* what() throw(){
+
+    const char *what() throw()
+    {
         return errMsg;
     }
 };
