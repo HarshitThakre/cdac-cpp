@@ -1,6 +1,6 @@
 #pragma once
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class LibraryMember
@@ -8,8 +8,9 @@ class LibraryMember
 private:
 	int id;
 	string name;
-	int* bookid_arr;
+	int *bookid_arr;
 	int nob;
+
 public:
 	LibraryMember(int id, string name, int nob)
 	{
@@ -21,7 +22,6 @@ public:
 		{
 			this->bookid_arr[i] = 0;
 		}
-
 	}
 
 	void display()
@@ -52,9 +52,9 @@ public:
 		}
 	}
 
-	LibraryMember(LibraryMember& copyObj)
+	LibraryMember(LibraryMember &copyObj)
 	{
-		//copy the details of copyObj in this object
+		// copy the details of copyObj in this object
 		this->id = copyObj.id;
 		this->name = copyObj.name;
 		this->nob = copyObj.nob;
@@ -65,9 +65,9 @@ public:
 		}
 	}
 
-	LibraryMember& operator=(LibraryMember& copyObj)
+	LibraryMember &operator=(LibraryMember &copyObj)
 	{
-		//copy the details of copyObj in this object
+		// copy the details of copyObj in this object
 		this->id = copyObj.id;
 		this->name = copyObj.name;
 		this->nob = copyObj.nob;
@@ -76,5 +76,6 @@ public:
 		{
 			this->bookid_arr[i] = copyObj.bookid_arr[i];
 		}
+		return *this;
 	}
 };
