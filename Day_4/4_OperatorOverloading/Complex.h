@@ -1,13 +1,15 @@
 #pragma once
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Complex
 {
 private:
 	float real, imag;
+
 public:
-	Complex() {
+	Complex()
+	{
 		real = 0.0;
 		imag = 0.0;
 	}
@@ -19,10 +21,10 @@ public:
 	void display()
 	{
 		cout << "\n the number is " << real << "+"
-			<< imag << "i";
+			 << imag << "i";
 	}
 
-	Complex& operator+(Complex& obj)
+	Complex operator+(Complex &obj)
 	{
 		Complex temp;
 		temp.real = this->real + obj.real;
@@ -30,7 +32,8 @@ public:
 		return temp;
 	}
 
-	Complex& operator-(Complex& obj)
+	//  diff
+	Complex operator-(Complex &obj)
 	{
 		Complex temp;
 		temp.real = this->real - obj.real;
@@ -38,7 +41,8 @@ public:
 		return temp;
 	}
 
-	Complex& operator-()
+	// negetion
+	Complex operator-()
 	{
 		Complex temp;
 		temp.real = -this->real;
@@ -46,21 +50,20 @@ public:
 		return temp;
 	}
 
-	Complex& operator++()
+	// pre increment
+	Complex &operator++()
 	{
 		this->real = this->real + 1;
 		this->imag = this->imag + 1;
 		return *this;
 	}
 
-	Complex& operator++(int dummy)
+	// # post inccrement
+	Complex operator++(int dummy)
 	{
 		Complex temp = *this;
 		this->real += 1;
 		this->imag += 1;
 		return temp;
 	}
-
-
 };
-
