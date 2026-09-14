@@ -4,17 +4,28 @@ int main()
 {
     int a = 10, b = 5;
 
-    // by address
-    cout << "\n before swap a & b :  " << a << " " << b;
-    swap_by_add(&a, &b);
+    // for reversing num
+    int num = 123456789;
 
-    cout << "\n After swap a & b :  " << a << " " << b << endl;
+    // // by address
+    // cout << "\n before swap a & b :  " << a << " " << b;
+    // swap_by_add(&a, &b);
 
-    // by reference
-    cout << "\n before swap a & b :  " << a << " " << b;
-    swap_by_ref(a, b);
+    // cout << "\n After swap a & b :  " << a << " " << b << endl;
 
-    cout << "\n After swap a & b :  " << a << " " << b << endl;
+    // // by reference
+    // cout << "\n before swap a & b :  " << a << " " << b;
+    // swap_by_ref(a, b);
+
+    // cout << "\n After swap a & b :  " << a << " " << b << endl;
+
+    // qestion 3 -------------------------------------------
+
+    // sum_and_diff(a, b);
+
+    // question 4 -------------------------------
+
+    reverse_num(num);
 
     return 0;
 }
