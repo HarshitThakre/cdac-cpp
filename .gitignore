@@ -1,0 +1,12 @@
+# Compiled executables
+a.out
+client
+program
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Other
+.DS_Store
